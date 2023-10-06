@@ -1,6 +1,6 @@
 public class Dragon implements Attacker {
-    String name;
-    String breath;
+    private String name;
+    private String breath;
 
     public Dragon(String name, String breath) {
         this.name = name;
@@ -15,5 +15,9 @@ public class Dragon implements Attacker {
     @Override
     public void attack(Defender defender) {
         System.out.printf("%s bellows its %s breath against %s\n", name, breath, defender.getName());
+    }
+
+    public String getBreath() {
+        return breath;
     }
 }

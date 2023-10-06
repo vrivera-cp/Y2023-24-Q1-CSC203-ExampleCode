@@ -6,7 +6,7 @@ public class InterfaceInstantiationMain {
         Attacker attacker = new Dragon("Smaug", "fire"); // Up-cast
         
         /* Invalid instantiations:
-            Attacker Attacker = new Attacker(); Can't instantiate an interface!
+            Attacker attacker = new Attacker(); Can't instantiate an interface!
          */
 
         // Defender Instantiations
@@ -19,7 +19,7 @@ public class InterfaceInstantiationMain {
         /* Invalid instantiations:
             Defender defender = new Defender(); Can't instantiate an interface!
             Hero wizardHero = new Wizard(); A Wizard is not a Hero
-            Wizard heroWizard = new Hero(); A Hero is not a Wizard
+            Wizard heroWizard = new Hero("Name", "Ability"); A Hero is not a Wizard
          */
     }
 }

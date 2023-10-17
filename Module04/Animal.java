@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public class Animal {
     private final String species;
     private int population;
@@ -24,7 +22,6 @@ public class Animal {
                 ", population=" + population +
                 '}';
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -35,6 +32,9 @@ public class Animal {
 
     @Override
     public int hashCode() {
-        return Objects.hash(species, population);
+        int hash = 1;
+        hash = hash * 31 + ((species != null) ? species.hashCode() : 0);
+        hash = hash * 31 + population;
+        return hash; // alternatively, return Objects.hash(species, population)
     }
 }

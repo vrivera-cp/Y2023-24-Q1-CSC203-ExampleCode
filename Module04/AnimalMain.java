@@ -18,7 +18,7 @@ public class AnimalMain {
         penguin.swim();  // From Swimmable
         penguin.fly();   // From Flyable, and shows penguins can't really fly!
 
-        // A sample of hash code demonstration, if needed
+        // A sample of hash code demonstration
         System.out.println("Hash code of beagle: " + beagle.hashCode());
         System.out.println("Hash code of generic animal: " + genericAnimal.hashCode());
     }

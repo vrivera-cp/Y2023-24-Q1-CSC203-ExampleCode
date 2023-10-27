@@ -46,5 +46,21 @@ public class LambdaMain5 {
 
         // Calling the lambda function
         mochi.drinkPotion(printifyPotion);
+
+
+        // Local variables in lambda functions
+        PotionDrinker unassumingPotionDrinker = new PotionDrinker("Harvest", 5, 1.0);
+
+        Potion deviousPotion = new Potion(p -> {
+            unassumingPotionDrinker.heightInFt = 0.01;
+            unassumingPotionDrinker.age = 100;
+            unassumingPotionDrinker.name = "Very Hungry " + unassumingPotionDrinker.name;
+        });
+
+        // Calling the lambda function
+        mochi.drinkPotion(deviousPotion);
+
+        // Showing the result
+        unassumingPotionDrinker.drinkPotion(printifyPotion);
     }
 }

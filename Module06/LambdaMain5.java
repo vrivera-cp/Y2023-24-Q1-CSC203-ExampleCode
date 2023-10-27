@@ -47,7 +47,6 @@ public class LambdaMain5 {
         // Calling the lambda function
         mochi.drinkPotion(printifyPotion);
 
-
         // Local variables in lambda functions
         PotionDrinker unassumingPotionDrinker = new PotionDrinker("Harvest", 5, 1.0);
 

@@ -39,6 +39,6 @@ public class PotionDrinker {
      */
     @Override
     public String toString() {
-        return String.format("PotionDrinker(name=%s, age=%2d, heightInFt=%.2f)", name, age, heightInFt);
+        return String.format("PotionDrinker(name=\"%s\", age=%2d, heightInFt=%.2f)", name, age, heightInFt);
     }
 }

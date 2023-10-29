@@ -1,7 +1,9 @@
+/**
+ * A simple class representing a location in 2D space.
+ */
 public final class Point {
     public final int x;
     public final int y;
-
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
@@ -12,27 +14,48 @@ public final class Point {
         return "(" + x + "," + y + ")";
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Point point = (Point) o;
-        return x == point.x && y == point.y;
+    public static boolean adjacent(Point p1, Point p2) {
+        return (p1.x == p2.x && Math.abs(p1.y - p2.y) == 1) || (p1.y == p2.y && Math.abs(p1.x - p2.x) == 1);
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 1;
-        hash = hash * 31 + x;
-        hash = hash * 31 + y;
-        return hash;
+    public boolean adjacent(Point point) {
+        return (x == point.x && Math.abs(y - point.y) == 1) || (y == point.y && Math.abs(x - point.x) == 1);
     }
 
-    public int manhattanDistanceTo(Point p2) {
-        int deltaX = x - p2.x;
-        int deltaY = y - p2.y;
+    public static int distanceSquared(Point p1, Point p2) {
+        int deltaX = p1.x - p2.x;
+        int deltaY = p1.y - p2.y;
+
+        return deltaX * deltaX + deltaY * deltaY;
+    }
+
+    public int distanceSquared(Point point) {
+        int deltaX = x - point.x;
+        int deltaY = y - point.y;
+
+        return deltaX * deltaX + deltaY * deltaY;
+    }
+
+    public int manhattanDistance(Point point) {
+        int deltaX = x - point.x;
+        int deltaY = y - point.y;
 
         return Math.abs(deltaX) + Math.abs(deltaY);
     }
 
+    @Override
+    public boolean equals(Object other) {
+        if (other == this) return true;
+        if (other == null || other.getClass() != getClass()) return false;
+        Point point = (Point) other;
+        return this.x == point.x && this.y == point.y;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 1;
+        result = result * 31 + x;
+        result = result * 31 + y;
+        return result;
+    }
 }

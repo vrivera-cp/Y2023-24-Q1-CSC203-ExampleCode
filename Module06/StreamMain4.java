@@ -49,7 +49,7 @@ public class StreamMain4 {
         Random rand = new Random();
         List<Point> guardianPositions = pointStream
                 .filter(p -> !p.equals(ADVERSARY_POSITION))         // Exclude adversary's position
-                .filter(p -> p.manhattanDistanceTo(ADVERSARY_POSITION) < CHECK_DISTANCE)  // Within a certain range
+                .filter(p -> p.manhattanDistance(ADVERSARY_POSITION) < CHECK_DISTANCE)  // Within a certain range
                 .sorted((e1, e2) -> rand.nextInt(3) - 1)     // Randomize the order
                 .limit(guardians.size())                            // Limit to number of guardians
                 .toList();                                          // Collect to a list
@@ -79,7 +79,7 @@ public class StreamMain4 {
                     System.out.print(guardians.get(index).charAt(0));
                 } else if (p.equals(ADVERSARY_POSITION)) {
                     System.out.print(ADVERSARY_GRAPHIC);
-                } else if (p.manhattanDistanceTo(ADVERSARY_POSITION) < CHECK_DISTANCE) {
+                } else if (p.manhattanDistance(ADVERSARY_POSITION) < CHECK_DISTANCE) {
                     System.out.print(POSITION_GRAPHIC_NEAR);
                 } else {
                     System.out.print(POSITION_GRAPHIC_FAR);

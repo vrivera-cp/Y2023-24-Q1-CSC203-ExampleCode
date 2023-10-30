@@ -6,7 +6,8 @@ import java.util.function.Function;
  * @author Vanessa Rivera
  * @version 1.0
  */
-public class LambdaMain2 {
+public class
+LambdaMain2 {
 
     /**
      * The main entry point for the application.
@@ -18,8 +19,8 @@ public class LambdaMain2 {
         Function<Double, Double> g;
 
         // g must reference a function that:
-        // 1. accepts an Integer
-        // 2. returns an Integer
+        // 1. accepts a Double
+        // 2. returns a Double
 
         // Assigning a lambda function
         g = x -> {

@@ -42,6 +42,7 @@ public class LambdaMain4 {
         // 2. Always returns a boolean value
 
         System.out.println(b.test(100, 100.0));
+        // Predicates are also called using `test()`
 
         // --------
         // Consumer
@@ -55,6 +56,6 @@ public class LambdaMain4 {
         // 2. Does not return anything
 
         c.accept("mochi");
-        // Predicates are called using `accept()`
+        // Consumables are called using `accept()`
     }
 }

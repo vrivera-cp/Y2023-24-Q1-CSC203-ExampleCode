@@ -6,7 +6,8 @@ import java.util.function.Function;
  * @author Vanessa Rivera
  * @version 1.0
  */
-public class LambdaMain1 {
+public class
+LambdaMain1 {
 
     /**
      * The main entry point for the application.

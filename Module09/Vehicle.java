@@ -1,6 +1,6 @@
 public class Vehicle {
     public VehicleType type;
-    public double batteryCapacity;
+    public double batteryLevel;
     public double fuel;
     public Point position;
     public double speed;

@@ -32,7 +32,7 @@ public class Vehicle {
         switch (type) {
             case BICYCLE:
             case ELECTRIC_CAR:
-                moveWheels();
+                moveTires();
                 break;
             case ROWBOAT:
                 moveWater();
@@ -49,10 +49,17 @@ public class Vehicle {
                 ));
         }
     }
+    void moveTires() {}
     void moveTrain() {}
-    void moveWheels() {}
     void moveWater() {}
     void moveSpace() {}
 
-    void refuel() {}
+    void refuel() {
+        if (type == VehicleType.ELECTRIC_CAR) {
+            refuelElectricCar();
+        } else if (type == VehicleType.SPACE_SHUTTLE){
+            /* refuel normally */
+        }
+    }
+    void refuelElectricCar() { }
 }

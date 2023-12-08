@@ -7,7 +7,25 @@ public class DigitalSong extends Song {
         this.listens = listens;
     }
 
-    public int listens() { return listens; }
+    public int getListens() { return listens; }
 
-    // Complete Equals Here
+    // instanceof version
+//    @Override
+//    public boolean equals(Object o) {
+//        if (super.equals(o) && o instanceof DigitalSong ds) {
+//            return listens == ds.listens;
+//        }
+//        return false;
+//    }
+
+    // getClass version
+//    @Override
+//    public boolean equals(Object o) {
+//        if (super.equals(o)) {
+//            DigitalSong ds = (DigitalSong) o;
+//            return listens == ds.listens;
+//        }
+//        return false;
+//    }
+
 }
